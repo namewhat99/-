@@ -1,0 +1,31 @@
+# 시계 방향으로 90도 회전 #
+def clockWise(arr):
+    row_length = len(arr)
+    column_length = len(arr[0])
+    # 원래 배열에서 y의 크기가 회전 배열에서 x의 크기가 됨 #
+    graph = [[0] * row_length for _ in range(column_length)]
+
+    for i in range(row_length):
+        for j in range(column_length):
+            graph[j][row_length - 1 - i] = arr[i][j]
+    
+    return graph
+
+# 반시계 방향으로 90도 회전 #
+def counterClockWise(arr):
+    row_length = len(arr)
+    column_length = len(arr[0])
+
+    graph = [[0] * row_length for _ in range(column_length)]
+
+    for i in range(row_length):
+        for j in range(column_length):
+            graph[column_length - 1 - j][i] = arr[i][j]
+    
+    return graph
+
+
+    
+
+print(clockWise([[1, 2, 3], [4, 5, 6], [7, 8, 9] , [10 , 11 , 12]]))
+print(counterClockWise([[1, 2, 3], [4, 5, 6], [7, 8, 9] , [10 , 11 , 12]]))
