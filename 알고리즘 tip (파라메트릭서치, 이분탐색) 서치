@@ -1,0 +1,17 @@
+ ## 파라메트릭 서치 (이분탐색) ##
+
+ while start <= end:
+        
+        mid = (start + end) // 2
+        
+        if right(mid):
+        
+            ans = mid
+            start = mid + 1
+            
+        else:
+            
+            end = mid - 1
+            
+## 현재까지의 결론: ans 의 배치는 ans가 답이 될 수 있는 부분에 배치하는 것이 맞다는 결론 (당연하지만) ##
+백준 1477 (참고)
